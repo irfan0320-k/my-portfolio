@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2 class="logo">MyPortfolio</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span>Irfan Hussain</span></h1>
+        <h2>Computer Engineering Student</h2>
+        <p>I love learning programming and building websites.</p>
+        <a href="#projects" class="btn">View My Projects</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Engineering student interested in
+            web development, Java programming and technology.
+            My goal is to build useful and creative applications.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="cards">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">Java</div>
+            <div class="card">MySQL</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>A personal website made using HTML, CSS and JavaScript.</p>
+            </div>
+            <div class="card">
+                <h3>Student Management System</h3>
+                <p>An application concept for managing student records.</p>
+            </div>
+            <div class="card">
+                <h3>Calculator</h3>
+                <p>A basic calculator project using programming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+            <p id="response"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Irfan Hussain | Personal Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
