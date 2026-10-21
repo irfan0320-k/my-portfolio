@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irfan Hussain - Portfolio QR Code</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      text-align: center;
+      padding: 30px 15px;
+      color: #172554;
+    }
+
+    .card {
+      background: white;
+      max-width: 420px;
+      margin: auto;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px #00000015;
+    }
+
+    h1 { font-size: 25px; }
+    p { color: #475569; }
+
+    #qrcode {
+      display: flex;
+      justify-content: center;
+      margin: 25px auto;
+    }
+
+    #qrcode img, #qrcode canvas {
+      max-width: 100%;
+      height: auto;
+    }
+
+    button {
+      background: #172554;
+      color: white;
+      border: none;
+      padding: 13px 20px;
+      margin: 7px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    a { color: #1d4ed8; overflow-wrap: anywhere; }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>IRFAN HUSSAIN</h1>
+    <p>PERSONAL PORTFOLIO QR CODE</p>
+
+    <div id="qrcode"></div>
+
+    <p>Scan this QR code to visit my portfolio.</p>
+
+    <a href="https://irfan0320-k.github.io/my-portfolio/" target="_blank">
+      Open My Portfolio
+    </a>
+
+    <br><br>
+    <button onclick="downloadQR()">Download QR Code</button>
+  </div>
+
+  <script>
+    const portfolioURL =
+      "https://irfan0320-k.github.io/my-portfolio/";
+
+    const qr = new QRCode(document.getElementById("qrcode"), {
+      text: portfolioURL,
+      width: 250,
+      height: 250,
+      colorDark: "#172554",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    function downloadQR() {
+      const canvas = document.querySelector("#qrcode canvas");
+      const img = document.querySelector("#qrcode img");
+
+      const imageURL = canvas
+        ? canvas.toDataURL("image/png")
+        : img.src;
+
+      const link = document.createElement("a");
+      link.href = imageURL;
+      link.download = "Irfan-Hussain-Portfolio-QR.png";
+      link.click();
+    }
+  </script>
+</body>
+</html>
